@@ -1,0 +1,31 @@
+body { background-color: #8BADA3; }
+
+.container {
+	background-color: #FFF;
+}
+.error, .alert, .notice, .success, .info  {
+	font-size: 20px;
+}
+
+p, table, hr, .box { margin-bottom:15px; }
+.box p { margin-bottom:10px; }
+
+.navigationpages {
+	padding: 5px;
+	text-align: center;
+}
+
+
+.navigationpages a {
+	font-size: 20px;
+	color: #DB6C0F;
+	text-decoration: none;
+}
+
+#buttom_newmessage {
+	background-color: #DB6C0F; padding: 15px;margin: 15px; cursor: pointer;
+}
+
+#buttom_newmessage a {
+	color: #000; text-decoration: none; font-size: 20px; text-shadow: 1px 1px #F0E3C0;
+}
