@@ -35,7 +35,11 @@ class ClImages extends ClMysql {
 		}
 	}
 
-	function fileoperation ($tmpname){     /* note this function is execueted if and only function checkfile() return true..this function is for uploading image(reaized) into mysql db.... */
+	/**
+	 * note this function is execueted if and only function checkfile() return true..
+	 * this function is for uploading image(reaized) into mysql db....
+	 */
+	function fileoperation ($tmpname) {
 		$this->open = fopen($tmpname, 'r+');
 		$this->content = fread($this->open, filesize($tmpname));
 
@@ -43,23 +47,29 @@ class ClImages extends ClMysql {
 
 		$this->im = imagecreatefromstring($this->content);
 
-		$this->width = imagesx($this->im); /* get the width of the image*/
-		$this->height = imagesy($this->im);  /*get the height of the image*/          
+		// get the width of the image
+		$this->width = imagesx($this->im);
+		// get the height of the image
+		$this->height = imagesy($this->im);
 
-		$this->xscale=$this->width/150;  /* this is the new size 150 px width, you can change this to your own requirements*/
-		$this->yscale=$this->height/180;        /* this is the new size 180 px height, you can change this to your own requirements*/
+		// this is the new size 150 px width, you can change this to your own requirements
+		$this->xscale=$this->width/150;
+		// this is the new size 180 px height, you can change this to your own requirements
+		$this->yscale=$this->height/180;
 
 		if ($this->yscale>$this->xscale){
-			$this->new_width = round($this->width * (1/$this->yscale)); /* new width*/
-			$this->new_height = round($this->height * (1/$this->yscale)); /* new height */
+			// new width
+			$this->new_width = round($this->width * (1/$this->yscale));
+			// new height
+			$this->new_height = round($this->height * (1/$this->yscale));
 		} else {
 			$this->new_width = round($this->width * (1/$this->xscale));
 			$this->new_height = round($this->height * (1/$this->xscale));
 		}
 
-		# create new image using thumbnail-size
+		// create new image using thumbnail-size
 		$this->thumb=imagecreatetruecolor( $this->new_width, $this->new_height);                  
-		# copy original image to thumbnail
+		// copy original image to thumbnail
 		imagecopyresampled($this->thumb,$this->im,0,0,0,0,$this->new_width,$this->new_height, $this->width , $this->height); #makes thumb
 
 
@@ -67,8 +77,10 @@ class ClImages extends ClMysql {
 
 		imagejpeg($this->thumb, $thumbname, 85);            
 
-		$this->redsize=filesize($thumbname);   /* getting the reduced size */
-		$this->instr = fopen($thumbname,"r+"); #need to move this to a safe directory
+		// getting the reduced size
+		$this->redsize=filesize($thumbname);
+		// need to move this to a safe directory
+		$this->instr = fopen($thumbname, "r+");
 
 		$this->thumb = addslashes(fread($this->instr,filesize($thumbname)));
 		$this->image = addslashes($this->content);

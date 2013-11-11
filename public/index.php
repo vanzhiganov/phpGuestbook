@@ -28,12 +28,11 @@ if ($Comments->CountAll == 0) {
 		$img = null;
 		$query = $Mysql->Query("select * FROM images where `comment_id`='{$lc->comment_id}' LIMIT 0,1");
 		if ($Mysql->num_rows == 1) {
-
-			$img = '<div style="border:5px solid; border-color:#3b6670; float:left;;">
+			$img = '<div class="image">
 <a href="/image.php?pid='.$query->image_id.'&full=1"><img src="/image.php?pid='.$query->image_id.'"/></a>
 </div><hr class="space" />';
 //echo '/image.php?pid='.$query['image_id;
-  }
+		}
 		
 		
 		$Content .= '<div class="" style="padding: 5px;">';
@@ -50,9 +49,9 @@ if ($Comments->CountAll == 0) {
 
 	for ( $i = 0; $i < $cnt; $i++ ) {
 		if ($n_page == $i) {
-			$Pagination .= " <a href='?p=$i' ><img src='/images/nav_current.png' border='0' /></a> ";
+			$Pagination .= " <a href='?p=$i' ><img src='/images/nav_current.png' /></a> ";
 		} else {
-			$Pagination .= " <a href='?p=$i' ><img src='/images/nav_other.png' border='0' /></a> ";
+			$Pagination .= " <a href='?p=$i' ><img src='/images/nav_other.png' /></a> ";
 		}
 	}
 

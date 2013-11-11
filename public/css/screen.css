@@ -1,20 +1,31 @@
-body { background-color: #8BADA3; }
+body {
+	background-color: #8BADA3;
+}
+
+img {
+	border: 0;
+}
 
 .container {
 	background-color: #FFF;
 }
+
 .error, .alert, .notice, .success, .info  {
 	font-size: 20px;
 }
 
-p, table, hr, .box { margin-bottom:15px; }
-.box p { margin-bottom:10px; }
+p, table, hr, .box {
+	margin-bottom: 15px;
+}
+
+.box p {
+	margin-bottom: 10px;
+}
 
 .navigationpages {
 	padding: 5px;
 	text-align: center;
 }
-
 
 .navigationpages a {
 	font-size: 20px;
@@ -23,9 +34,21 @@ p, table, hr, .box { margin-bottom:15px; }
 }
 
 #buttom_newmessage {
-	background-color: #DB6C0F; padding: 15px;margin: 15px; cursor: pointer;
+	background-color: #DB6C0F;
+	padding: 15px;
+	margin: 15px;
+	cursor: pointer;
 }
 
 #buttom_newmessage a {
-	color: #000; text-decoration: none; font-size: 20px; text-shadow: 1px 1px #F0E3C0;
+	color: #000;
+	text-decoration: none;
+	font-size: 20px;
+	text-shadow: 1px 1px #F0E3C0;
+}
+
+.image {
+	border: 5px solid;
+	border-color: #3b6670;
+	float: left;
 }

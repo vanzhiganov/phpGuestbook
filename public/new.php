@@ -12,7 +12,7 @@ $Errno = 0;
 $SubmitOk = false;
 
 if ($Post->NewComment->Submit == 1) {
-$SubmitOk = true;
+	$SubmitOk = true;
 	
 	$Post->NewComment->Name = (isset($_POST['name'])) ? stripcslashes(strip_tags($_POST['name'])) : null;
 	$Post->NewComment->Email = (isset($_POST['email'])) ? stripcslashes(strip_tags($_POST['email'])) : null;
@@ -36,7 +36,6 @@ $SubmitOk = true;
 	
 	if ($SubmitOk == true) {
 		$NewcommentID = $Comments->NewItem(array('name'=>$Post->NewComment->Name,'email'=>$Post->NewComment->Email,'comment'=>$Post->NewComment->Comment));
-
 
 		if (isset($_POST['upload']) && $_FILES['userfile']['size'] > 0 && $Settings->Def->UploadImagesEnable == 'y') {
 			$type=$_FILES['userfile']['type'];
