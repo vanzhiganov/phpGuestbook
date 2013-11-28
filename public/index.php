@@ -29,7 +29,7 @@ if ($Comments->CountAll == 0) {
 		$query = $Mysql->Query("select * FROM images where `comment_id`='{$lc->comment_id}' LIMIT 0,1");
 		if ($Mysql->num_rows == 1) {
 			$img = '<div class="image">
-<a href="/image.php?pid='.$query->image_id.'&full=1"><img src="/image.php?pid='.$query->image_id.'"/></a>
+<a href="image.php?pid='.$query->image_id.'&full=1"><img src="image.php?pid='.$query->image_id.'"/></a>
 </div><hr class="space" />';
 //echo '/image.php?pid='.$query['image_id;
 		}
@@ -49,9 +49,9 @@ if ($Comments->CountAll == 0) {
 
 	for ( $i = 0; $i < $cnt; $i++ ) {
 		if ($n_page == $i) {
-			$Pagination .= " <a href='?p=$i' ><img src='/images/nav_current.png' /></a> ";
+			$Pagination .= " <a href='?p=$i' ><img src='images/nav_current.png' /></a> ";
 		} else {
-			$Pagination .= " <a href='?p=$i' ><img src='/images/nav_other.png' /></a> ";
+			$Pagination .= " <a href='?p=$i' ><img src='images/nav_other.png' /></a> ";
 		}
 	}
 
@@ -67,10 +67,10 @@ if ($Comments->CountAll == 0) {
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Гостевая книга</title>
 		<!-- Framework CSS -->
-		<link rel="stylesheet" href="/css/blueprint/screen.css" type="text/css" media="screen, projection">
-		<link rel="stylesheet" href="/css/blueprint/print.css" type="text/css" media="print">
-		<!--[if lt IE 8]><link rel="stylesheet" href="/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
-		<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
+		<link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print">
+		<!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+		<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen">
 	</head>
 	<body>
 		<hr class="space" />
@@ -78,10 +78,10 @@ if ($Comments->CountAll == 0) {
 			<hr class="space" />
 			<div class="span-6">
 				<div style="text-align: center">
-					<a href="/"><img src="/images/logo_softline.png" border="0" /></a>
+					<a href="./"><img src="images/logo_softline.png" border="0" /></a>
 					<hr class="space" />
 					<div id="buttom_newmessage" onclick="location.href='/new'">
-						<a href="/new">Новая запись</a>
+						<a href="new">Новая запись</a>
 					</div>
 				</div>
 			</div>

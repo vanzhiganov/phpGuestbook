@@ -73,10 +73,10 @@ if ($Post->NewComment->Submit == 1) {
 		<title>Гостевая книга</title>
 
 		<!-- Framework CSS -->
-		<link rel="stylesheet" href="/css/blueprint/screen.css" type="text/css" media="screen, projection">
-		<link rel="stylesheet" href="/css/blueprint/print.css" type="text/css" media="print">
-		<!--[if lt IE 8]><link rel="stylesheet" href="/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
-		<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
+		<link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print">
+		<!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+		<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen">
 	</head>
 	<body>
 		<hr class="space" />
@@ -84,10 +84,10 @@ if ($Post->NewComment->Submit == 1) {
 			<hr class="space" />
 			<div class="span-6">
 				<div style="text-align: center">
-					<a href="/"><img src="/images/logo_softline.png" border="0" /></a>
+					<a href="/"><img src="images/logo_softline.png" border="0" /></a>
 					<hr class="space" />
 					<div style="background-color: #DB6C0F; padding: 15px;margin: 15px; cursor: pointer;" onclick="location.href='/new'">
-						<a href="/new" style="color: #000; text-decoration: none; font-size: 20px; text-shadow: 1px 1px #F0E3C0">Новая запись</a>
+						<a href="new" style="color: #000; text-decoration: none; font-size: 20px; text-shadow: 1px 1px #F0E3C0">Новая запись</a>
 					</div>
 				</div>
 			</div>
@@ -103,7 +103,7 @@ if ($Post->NewComment->Submit == 1) {
 						}
 					}
 					?>
-					<form id="form1" name="form1" method="post" action="/new"  enctype="multipart/form-data">
+					<form id="form1" name="form1" method="post" action="./new"  enctype="multipart/form-data">
 					<input type="hidden" name="submit" id="submit" value="1" />
 					<div style="font-size:20px">
 						Имя<br />
@@ -133,10 +133,8 @@ if ($Post->NewComment->Submit == 1) {
 					</form>
 				</div>
 				<hr class="space" />
-			</div>
-
-			<hr class="space" />
-		
-    </div>
-  </body>
+                </div>
+            <hr class="space" />
+        </div>
+    </body>
 </html>

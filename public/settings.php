@@ -37,10 +37,10 @@ if (isset($_POST['submit']) && $_POST['submit'] == 1) {
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Гостевая книга</title>
 		<!-- Framework CSS -->
-		<link rel="stylesheet" href="/css/blueprint/screen.css" type="text/css" media="screen, projection">
-		<link rel="stylesheet" href="/css/blueprint/print.css" type="text/css" media="print">
-		<!--[if lt IE 8]><link rel="stylesheet" href="/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
-		<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
+		<link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print">
+		<!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+		<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen">
 	</head>
 	<body>
 		<hr class="space" />
@@ -48,10 +48,10 @@ if (isset($_POST['submit']) && $_POST['submit'] == 1) {
 			<hr class="space" />
 			<div class="span-6">
 				<div style="text-align: center">
-					<a href="/"><img src="/images/logo_softline.png" border="0" /></a>
+					<a href="./"><img src="images/logo_softline.png" border="0" /></a>
 					<hr class="space" />
 					<div id="buttom_newmessage" onclick="location.href='/new'">
-						<a href="/new">Новая запись</a>
+						<a href="./new">Новая запись</a>
 					</div>
 				</div>
 			</div>
@@ -62,7 +62,7 @@ if (isset($_POST['submit']) && $_POST['submit'] == 1) {
 				
 				<div class="" style="padding: 5px;">
 				<?php if ($Saved == true) { echo "<div class='success'>Изменения сохранены.</div>"; } ?>
-					<form id="form1" name="form1" method="post" action="/settings">
+					<form id="form1" name="form1" method="post" action="./settings">
 					<input type="hidden" name="submit" id="submit" value="1" />
 					<input type="hidden" name="ModerateComments" id="ModerateComments" value="n">
 					<!-- div style="font-size:20px">

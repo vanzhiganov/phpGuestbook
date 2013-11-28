@@ -27,7 +27,7 @@ if ((isset($_POST['install'])) && $_POST['install'] == 'install') {
 
 	if ($SubmitOk == true) {
 		//header("Location: /");
-		echo '<hr /><a href="/">На главную</a> | <a href="/settings">Настройки</a>';
+		echo '<hr /><a href="./">На главную</a> | <a href="./settings">Настройки</a>';
 		exit();
 	}
 }
@@ -39,10 +39,10 @@ if ((isset($_POST['install'])) && $_POST['install'] == 'install') {
 		<title>Гостевая книга</title>
 
 		<!-- Framework CSS -->
-		<link rel="stylesheet" href="/css/blueprint/screen.css" type="text/css" media="screen, projection">
-		<link rel="stylesheet" href="/css/blueprint/print.css" type="text/css" media="print">
-		<!--[if lt IE 8]><link rel="stylesheet" href="/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
-		<link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection">
+		<link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print">
+		<!--[if lt IE 8]><link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
+		<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen">
 	</head>
 	<body>
 		<hr class="space" />
@@ -50,7 +50,7 @@ if ((isset($_POST['install'])) && $_POST['install'] == 'install') {
 			<hr class="space" />
 			<div class="span-6">
 				<div style="text-align: center">
-					<a href="/"><img src="/images/logo_softline.png" border="0" /></a>
+					<a href="/"><img src="images/logo_softline.png" border="0" /></a>
 					<hr class="space" />
 					
 					
@@ -72,7 +72,7 @@ if ((isset($_POST['install'])) && $_POST['install'] == 'install') {
 					<p>После нажатия кнопки "<b>Установить</b>" что расположена чуть ниже, будет установлена база данных.</p>
 					<p>После, в БД будут установленны некоторые изначальные параметры, изменить которые ты можешь по адресу http://yousite<b>/settings</b>.</p>
 					<div class="notice">Внимание! Все данные в указанной БД будут уничтожены.</div>
-					<form id="form1" name="form1" method="post" action="/install.php">
+					<form id="form1" name="form1" method="post" action="install.php">
 					<input type="hidden" name="install" value="install"  />
 					<div style="font-size:20px">
 						<hr class="space" />
