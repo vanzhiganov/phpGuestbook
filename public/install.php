@@ -5,12 +5,15 @@ include("../library/Common.php");
 include("../library/Images.php");
 include("../library/Comments.php");
 
-
-$Error = null;
-$Errno = 0;
 $InstallOk = false;
 
-if ((isset($_POST['install'])) && $_POST['install'] == 'install') {
+$content = array();
+// message wrapper
+$content['message'] = array('item' => array(), 'total' => 0);
+// catch GET & POST parameters
+$content['method']['post']['install'] = (filter_input(INPUT_POST, 'pid') ? filter_input(INPUT_POST, 'pid') : null);
+
+if ((isset($content['method']['post']['install'])) && $content['method']['post']['install'] == 'install') {
 	$SubmitOk = true;
 
 
@@ -61,9 +64,9 @@ if ((isset($_POST['install'])) && $_POST['install'] == 'install') {
 				<div class="" style="padding: 5px;">
 					<?php
 					if ($SubmitOk == false) {
-						if ($Errno > 0) {
-							foreach($Error as $er) {
-								echo "<div class='error'>".$er."</div>";
+						if ($content['message']['total'] > 0) {
+							foreach($content['message']['item'] as $err) {
+								echo "<div class='error'>".$err."</div>";
 							}
 						}
 					}
@@ -84,7 +87,7 @@ if ((isset($_POST['install'])) && $_POST['install'] == 'install') {
 			</div>
 
 			<hr class="space" />
-		
+	
     </div>
   </body>
 </html>
