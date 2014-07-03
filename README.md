@@ -3,6 +3,9 @@ phpGuestbook
 
 Гостевая книга была разработана для сдачи тестового задания в январе 2011 года в компанию Softline (http://softline.ru/)
 
+На основе этого проекта, начат новый проект - CommentBox (https://github.com/StackWebServices/CommentBox)
+
+
 Возможности
 ---------------
 
