@@ -1,8 +1,8 @@
 <?php
-include("../application/config.php");
-include("../library/Mysql.php");
-include("../library/Common.php");
-include("../library/Comments.php");
+include("application/config.php");
+include("library/Mysql.php");
+include("library/Common.php");
+include("library/Comments.php");
 
 //---
 $Saved = false;

@@ -1,9 +1,9 @@
 <?php
 header("Content-type:image/jpeg");
 
-include("../application/config.php");
-include("../library/Mysql.php");
-include("../library/Common.php");
+include("application/config.php");
+include("library/Mysql.php");
+include("library/Common.php");
 
 $id = (isset($_GET['pid'])) ? (int) $_GET['pid']: "";
 $full = (isset($_GET['full'])) ? (int) $_GET['full']: 0;

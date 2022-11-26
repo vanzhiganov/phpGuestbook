@@ -1,10 +1,10 @@
 <?php
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'db');
 define('DB_USER', 'user');
 define('DB_PASS', 'password');
-define('DB_BASE', 'databasename');
+define('DB_BASE', 'gb');
 
-define('DIR_ROOT', '/var/www/softline.local');
+define('DIR_ROOT', '/var/www/html');
 
 define('DEBUG_MODE', false);
 define('HRU', false);

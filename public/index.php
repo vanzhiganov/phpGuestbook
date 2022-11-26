@@ -1,8 +1,8 @@
 <?php
-include("../application/config.php");
-include("../library/Mysql.php");
-include("../library/Common.php");
-include("../library/Comments.php");
+include("application/config.php");
+include("library/Mysql.php");
+include("library/Common.php");
+include("library/Comments.php");
 
 $Comments->CountAll();
 
@@ -31,7 +31,6 @@ if ($Comments->CountAll == 0) {
 			$img = '<div class="image">
 <a href="image.php?pid='.$query->image_id.'&full=1"><img src="image.php?pid='.$query->image_id.'"/></a>
 </div><hr class="space" />';
-//echo '/image.php?pid='.$query['image_id;
 		}
 		
 		

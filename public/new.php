@@ -1,9 +1,9 @@
 <?php
-include("../application/config.php");
-include("../library/Mysql.php");
-include("../library/Common.php");
-include("../library/Images.php");
-include("../library/Comments.php");
+include("application/config.php");
+include("library/Mysql.php");
+include("library/Common.php");
+include("library/Images.php");
+include("library/Comments.php");
 
 $Post->NewComment->Submit = (isset($_POST['submit'])) ? (int) $_POST['submit'] : 0;
 
